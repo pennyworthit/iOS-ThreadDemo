@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Business.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+        
+        Business *business = [[Business alloc] init];
+        [business runBusiness];
+        
+        while (YES) {};
     }
     return 0;
 }

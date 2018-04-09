@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9D21F7C4207B10A600ED5776 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D21F7C3207B10A600ED5776 /* main.m */; };
+		9D21F7CF207B12EC00ED5776 /* Producer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D21F7CE207B12EC00ED5776 /* Producer.m */; };
+		9D21F7D2207B12F400ED5776 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D21F7D1207B12F400ED5776 /* Customer.m */; };
+		9DFC36AB207B34DB00E12C53 /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC36AA207B34DB00E12C53 /* Business.m */; };
+		9DFC36B1207B373A00E12C53 /* NSMutableArray+Basic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC36B0207B373A00E12C53 /* NSMutableArray+Basic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		9D21F7C0207B10A600ED5776 /* ThreadingDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ThreadingDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D21F7C3207B10A600ED5776 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D21F7CD207B12EC00ED5776 /* Producer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Producer.h; sourceTree = "<group>"; };
+		9D21F7CE207B12EC00ED5776 /* Producer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Producer.m; sourceTree = "<group>"; };
+		9D21F7D0207B12F400ED5776 /* Customer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		9D21F7D1207B12F400ED5776 /* Customer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		9DFC36A9207B34DB00E12C53 /* Business.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Business.h; sourceTree = "<group>"; };
+		9DFC36AA207B34DB00E12C53 /* Business.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Business.m; sourceTree = "<group>"; };
+		9DFC36AF207B373A00E12C53 /* NSMutableArray+Basic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Basic.h"; sourceTree = "<group>"; };
+		9DFC36B0207B373A00E12C53 /* NSMutableArray+Basic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Basic.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				9D21F7C3207B10A600ED5776 /* main.m */,
+				9D21F7CD207B12EC00ED5776 /* Producer.h */,
+				9D21F7CE207B12EC00ED5776 /* Producer.m */,
+				9D21F7D0207B12F400ED5776 /* Customer.h */,
+				9D21F7D1207B12F400ED5776 /* Customer.m */,
+				9DFC36A9207B34DB00E12C53 /* Business.h */,
+				9DFC36AA207B34DB00E12C53 /* Business.m */,
+				9DFC36AF207B373A00E12C53 /* NSMutableArray+Basic.h */,
+				9DFC36B0207B373A00E12C53 /* NSMutableArray+Basic.m */,
 			);
 			path = ThreadingDemo;
 			sourceTree = "<group>";
@@ -119,6 +139,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D21F7C4207B10A600ED5776 /* main.m in Sources */,
+				9DFC36AB207B34DB00E12C53 /* Business.m in Sources */,
+				9D21F7D2207B12F400ED5776 /* Customer.m in Sources */,
+				9DFC36B1207B373A00E12C53 /* NSMutableArray+Basic.m in Sources */,
+				9D21F7CF207B12EC00ED5776 /* Producer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
