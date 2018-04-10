@@ -1,5 +1,7 @@
 # 多线程 Demo
 
+[Demo](https://github.com/pennyworthit/iOS-ThreadDemo.git)
+
 ## NSThread
 
 ### 创建一个任务
@@ -12,6 +14,7 @@ NSThread *purchaseA = [[NSThread alloc] initWithTarget:self selector:@selector(r
 
 - 通过 `selector` 参数指定任务（一个方法）
 - 通过 `object` 参数来指定任务的参数，对应地，任务方法需要修改其方法签名来接受参数
+- `target` 在线程执行期间会被线程持有，即引用计数加一，当线程退出后，`target` 才会被释放
 
 执行任务
 
@@ -21,7 +24,7 @@ NSThread *purchaseA = [[NSThread alloc] initWithTarget:self selector:@selector(r
 
 - 需要调用 `start` 方法，否则任务不会自动执行
 
-### NSLock 线程同步
+### `NSLock` 线程同步
 
 ```objc
 // 创建一把锁
@@ -54,7 +57,7 @@ while (YES) {};
 return 0;
 ```
 
-### NSCondition 线程同步
+### `NSCondition` 线程同步
 
 `NSCondition` 既是一个锁，也是一个检查点(checkpoint)
 
@@ -90,4 +93,19 @@ self.condiction = [[NSCondition alloc] init];
 [self.condiction broadcast];
 ```
 
+
+### `@synchronized` 线程同步
+
+原理与 `NSLock` 相同，可以说是一个语法糖
+
+注意事项
+
+- `@synchronized` 会自动为 `@synchronized` 的 block 隐式添加异常处理，若在同步操作的过程中，发生异常，锁会被释放
+- 对于使用 `@synchronized` 的对象，Runtime 会为其申请递归锁，并利用其内存地址，存储在一个哈希表中
+- `@synchronized` 的 block 中，若对象被释放或者设置成了 `nil`, 好像也没什么事
+- 向 `@synchronized` 中锁定一个 `nil` 值，可能会导致线程不安全的行为
+
+[More than you want to know about @synchronized](http://rykap.com/objective-c/2015/05/09/synchronized/)
+
+> 目前看来，`@synchronized` 在使用过程中，有较多暗坑，所以这里先不做理解了
 
