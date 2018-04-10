@@ -6,19 +6,16 @@
 //  Copyright © 2018 wenyongyang. All rights reserved.
 //
 
-#import "Business.h"
-#import "Producer.h"
-#import "Customer.h"
-#import "NSMutableArray+Basic.h"
+#import "BusinessSyncWithLock.h"
 
-@interface Business()
+@interface BusinessSyncWithLock()
 
 @property (nonatomic, strong) NSLock *lock;
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *production;
 
 @end
 
-@implementation Business
+@implementation BusinessSyncWithLock
 
 - (instancetype)init {
     self = [super init];
@@ -28,10 +25,6 @@
     }
     
     return self;
-}
-
-- (void)dealloc {
-    NSLog(@"dealloc");
 }
 
 - (void)runBusiness {

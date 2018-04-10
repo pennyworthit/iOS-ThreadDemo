@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Business.h"
+#import "BusinessProtocol.h"
+#import "BusinessSyncWithLock.h"
+#import "BusinessSyncWithCondition.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         
-        Business *business = [[Business alloc] init];
+//        id<BusinessProtocol> business = [[BusinessSyncWithLock alloc] init];
+        id<BusinessProtocol> business = [[BusinessSyncWithCondition alloc] init];
         [business runBusiness];
         
         while (YES) {};

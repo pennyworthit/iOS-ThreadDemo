@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BusinessProtocol.h"
 
-@interface Business : NSObject
-
-- (void)runBusiness;
+@interface BusinessSyncWithLock : NSObject<BusinessProtocol>
 
 @end

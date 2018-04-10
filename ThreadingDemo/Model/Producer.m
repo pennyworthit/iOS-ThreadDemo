@@ -11,6 +11,7 @@
 @interface Producer()
 @property (nonatomic, assign) NSInteger amount;
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *production;
+@property (nonatomic, assign) NSInteger nextInt;
 @end
 
 @implementation Producer
@@ -24,10 +25,19 @@
     return self;
 }
 
+- (void)produceOne {
+    if (self.nextInt > self.amount) {
+        NSLog(@"Production exhausted");
+        return;
+    }
+    
+    [self.production addObject:@(self.nextInt++)];
+}
+
 - (NSMutableArray<NSNumber *> *)production {
     if (!_production) {
         _production = [NSMutableArray arrayWithCapacity:self.amount];
-        for (int i = 0; i < self.amount; i++) {
+        for (int i = 0; i < 5; i++) {
             [_production addObject:@(i)];
         }
     }

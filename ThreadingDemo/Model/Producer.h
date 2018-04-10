@@ -10,7 +10,9 @@
 
 @interface Producer : NSObject
 
-- (instancetype)initWithAmount:(NSInteger)amount;
 @property (nonatomic, strong, readonly) NSMutableArray<NSNumber *> *production;
+
+- (instancetype)initWithAmount:(NSInteger)amount;
+- (void)produceOne;
 
 @end

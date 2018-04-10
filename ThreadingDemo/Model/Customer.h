@@ -10,6 +10,8 @@
 
 @interface Customer : NSObject
 
+@property (nonatomic, strong, readonly) NSMutableArray<NSNumber *> *consumed;
+
 - (void)consumeNumber:(NSNumber *)aNumber;
 
 - (void)consumeInteger:(NSInteger)anInt;

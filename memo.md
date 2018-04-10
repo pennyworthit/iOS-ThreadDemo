@@ -21,7 +21,7 @@ NSThread *purchaseA = [[NSThread alloc] initWithTarget:self selector:@selector(r
 
 - 需要调用 `start` 方法，否则任务不会自动执行
 
-### NSLock 同步
+### NSLock 线程同步
 
 ```objc
 // 创建一把锁
@@ -53,6 +53,8 @@ self.lock = [[NSLock alloc] init];
 while (YES) {};
 return 0;
 ```
+
+### NSCondition 线程同步
 
 
 
