@@ -56,6 +56,38 @@ return 0;
 
 ### NSCondition 线程同步
 
+`NSCondition` 既是一个锁，也是一个检查点(checkpoint)
 
+ - 即 `NSCondition` 内部含有一个类似 `NSLock` 的东西，用来保护数据的同步
+
+
+使用 `NSCondition` 的正确方法
+
+1. 为 condition 加锁
+2. 测试一个条件，判断是否能执行任务
+    - `false`, 不能执行任务，调用 `wait` 等方法阻塞当前线程，并循环检查条件
+    - `true`, 可以执行任务
+3. 有需要的话，更新任务执行的条件，并调用 `signal` 或 `boardcast` 方法发送信号
+4. 为 condition 解锁
+
+```objc
+// 创建一个 condition
+self.condiction = [[NSCondition alloc] init];
+
+// 为 condition 加锁
+[self.condiction lock];
+
+// 为 condition 解锁
+[self.condiction unlock];
+
+// 阻塞当前线程，等待信号发出后继续执行
+[self.condiction wait];
+
+// 向 condition 发送信号，唤醒一个等待的线程来执行任务
+[self.condiction signal];
+
+// 向 condition 发送信号，唤醒所有等待的线程来执行任务
+[self.condiction broadcast];
+```
 
 
