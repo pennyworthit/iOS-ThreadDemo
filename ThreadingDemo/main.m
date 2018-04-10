@@ -10,13 +10,15 @@
 #import "BusinessProtocol.h"
 #import "BusinessSyncWithLock.h"
 #import "BusinessSyncWithCondition.h"
+#import "BusinessOperation.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         
 //        id<BusinessProtocol> business = [[BusinessSyncWithLock alloc] init];
-        id<BusinessProtocol> business = [[BusinessSyncWithCondition alloc] init];
+//        id<BusinessProtocol> business = [[BusinessSyncWithCondition alloc] init];
+        id<BusinessProtocol> business = [[BusinessOperation alloc] init];
         [business runBusiness];
         
         while (YES) {};

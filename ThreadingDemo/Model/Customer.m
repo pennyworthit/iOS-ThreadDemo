@@ -11,10 +11,20 @@
 @interface Customer()
 
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *consumed;
+@property (nonatomic, copy) NSString *name;
 
 @end
 
 @implementation Customer
+
+- (instancetype)initWithName:(NSString *)name {
+    self = [super init];
+    if (self) {
+        self.name = name;
+    }
+    
+    return self;
+}
 
 - (void)consumeNumber:(NSNumber *)aNumber {
     [self.consumed addObject: aNumber];

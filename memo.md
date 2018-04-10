@@ -24,6 +24,30 @@ NSThread *purchaseA = [[NSThread alloc] initWithTarget:self selector:@selector(r
 
 - 需要调用 `start` 方法，否则任务不会自动执行
 
+## NSOperation
+
+`NSOperation` 比 `NSThread` 更具可操作性
+ 
+ - 可取消任务 `[anOperation cancel]`
+ - 可设置优先级 `anOperation.queuePriority`
+ - 可设置任务依赖 `[anOperation addDependency: xxx]`
+ - 可通过 KVO 进行监听，可获知任务执行状态
+
+系统提供两种 `NSOperation` 类型
+
+- `NSInvocationOperation` 通过函数或方法来创建任务
+- `NSBlockOperation` 通过 Block 来创建任务
+
+### NSOperationQueue
+
+更多地，`NSOperation` 将会与 `NSOperationQueue` 结合使用
+
+同样，`NSOperationQueue` 也可以通过 KVO 进行监听
+
+通过 `[self.operationQueue addOperations:operations waitUntilFinished:NO];` 可以一次添加多个任务，`waitUntilFinished` 用于指定是否阻塞当前线程，一般都是 `NO`
+
+## 线程同步
+
 ### `NSLock` 线程同步
 
 ```objc

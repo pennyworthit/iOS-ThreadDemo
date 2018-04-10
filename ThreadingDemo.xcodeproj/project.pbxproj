@@ -11,6 +11,7 @@
 		9D21F7CF207B12EC00ED5776 /* Producer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D21F7CE207B12EC00ED5776 /* Producer.m */; };
 		9D21F7D2207B12F400ED5776 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D21F7D1207B12F400ED5776 /* Customer.m */; };
 		9D9E1397207C88BE0048A52C /* BusinessSyncWithCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E1396207C88BE0048A52C /* BusinessSyncWithCondition.m */; };
+		9D9E139A207C9D190048A52C /* BusinessOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E1399207C9D190048A52C /* BusinessOperation.m */; };
 		9DFC36AB207B34DB00E12C53 /* BusinessSyncWithLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC36AA207B34DB00E12C53 /* BusinessSyncWithLock.m */; };
 		9DFC36B1207B373A00E12C53 /* NSMutableArray+Basic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC36B0207B373A00E12C53 /* NSMutableArray+Basic.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,8 @@
 		9D9E138F207C4F510048A52C /* BusinessProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessProtocol.h; sourceTree = "<group>"; };
 		9D9E1390207C50940048A52C /* BusinessSyncWithCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessSyncWithCondition.h; sourceTree = "<group>"; };
 		9D9E1396207C88BE0048A52C /* BusinessSyncWithCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessSyncWithCondition.m; sourceTree = "<group>"; };
+		9D9E1398207C9D190048A52C /* BusinessOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessOperation.h; sourceTree = "<group>"; };
+		9D9E1399207C9D190048A52C /* BusinessOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessOperation.m; sourceTree = "<group>"; };
 		9DFC36A9207B34DB00E12C53 /* BusinessSyncWithLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessSyncWithLock.h; sourceTree = "<group>"; };
 		9DFC36AA207B34DB00E12C53 /* BusinessSyncWithLock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessSyncWithLock.m; sourceTree = "<group>"; };
 		9DFC36AF207B373A00E12C53 /* NSMutableArray+Basic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Basic.h"; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				9DFC36AA207B34DB00E12C53 /* BusinessSyncWithLock.m */,
 				9D9E1390207C50940048A52C /* BusinessSyncWithCondition.h */,
 				9D9E1396207C88BE0048A52C /* BusinessSyncWithCondition.m */,
+				9D9E1398207C9D190048A52C /* BusinessOperation.h */,
+				9D9E1399207C9D190048A52C /* BusinessOperation.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D9E139A207C9D190048A52C /* BusinessOperation.m in Sources */,
 				9D21F7C4207B10A600ED5776 /* main.m in Sources */,
 				9DFC36AB207B34DB00E12C53 /* BusinessSyncWithLock.m in Sources */,
 				9D21F7D2207B12F400ED5776 /* Customer.m in Sources */,

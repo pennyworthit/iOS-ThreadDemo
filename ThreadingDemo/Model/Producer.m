@@ -37,7 +37,7 @@
 - (NSMutableArray<NSNumber *> *)production {
     if (!_production) {
         _production = [NSMutableArray arrayWithCapacity:self.amount];
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 100; i++) {
             [_production addObject:@(i)];
         }
     }
